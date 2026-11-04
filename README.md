@@ -10,6 +10,10 @@
 and ABC classes, stops when a data-quality check fails, backtests simple demand forecasts, and exports the tables
 for a Tableau dashboard. An Airflow DAG runs the steps in order every week.
 
+![Terminal run of the pipeline](docs/demo.gif)
+
+<sub>Real output of `python -m retail_pipeline.run`, rendered by [`docs/make_media.py`](docs/make_media.py).</sub>
+
 ![Weekly revenue, ABC Pareto curve and forecast backtest](docs/pipeline_outputs.png)
 
 <sub>Drawn from the pipeline's CSV extracts by [`docs/make_figures.py`](docs/make_figures.py).</sub>
@@ -25,6 +29,10 @@ flowchart LR
     D --> E[forecast_backtest<br/><sub>top 50 A products</sub>]
     E --> F[export_tableau<br/><sub>CSV extracts</sub>]
 ```
+
+![The six tasks in the Airflow UI, all successful](docs/airflow_run.png)
+
+<sub>A run started from the Airflow scheduler: six tasks, all successful, 47 seconds end to end.</sub>
 
 | Layer | Contents |
 |---|---|
