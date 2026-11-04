@@ -1,0 +1,2 @@
+raw_rows,removed_exact_duplicates,removed_cancellations,removed_non_positive_quantity,removed_non_positive_price,removed_non_product_codes,clean_rows,products,a_class_products,best_method,best_wape
+1067371,34335,19104,3393,2626,4699,1003214,4877,1040,moving average (4 weeks),0.4873
